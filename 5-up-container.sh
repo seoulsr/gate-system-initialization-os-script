@@ -18,11 +18,11 @@ cd gate-system-display
 docker compose up -d
 
 cd ..
-cd wiegan-reciever
+cd weigand-reciever
 docker compose up -d
 
 cd ..
-cd wiegan-sender
+cd weigand-sender
 docker compose up -d
 
 cd ..
