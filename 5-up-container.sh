@@ -6,7 +6,7 @@ docker volume create gate-system-images
 cd ..
 cd gate-system-mysql-server
 docker compose up -d
-sleep 20
+sleep 60
 docker compose -f seeder.yml up -d
 
 cd ..
