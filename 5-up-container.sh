@@ -3,22 +3,33 @@ docker volume create gate-system-logs
 docker volume create gate-system-mysql
 docker volume create gate-system-images
 
-cd . ./gate-system-mysql-server
+cd ..
+cd gate-system-mysql-server
 docker compose up -d
+sleep 20
 docker compose -f seeder.yml up -d
 
-cd . ./gate-system-event-handler
+cd ..
+cd gate-system-event-handler
 docker compose up -d
 
-cd . ./gate-system-display
+cd ..
+cd gate-system-display
 docker compose up -d
 
-cd . ./wiegan-reciever
+cd ..
+cd wiegan-reciever
 docker compose up -d
 
-cd . ./wiegan-sender
+cd ..
+cd wiegan-sender
 docker compose up -d
 
-cd . ./gate-system-start-up-browser
+cd ..
+cd sync-bis-data
+docker compose up -d
+
+cd ..
+cd gate-system-start-up-browser
 chmod +x set-crontab.sh
 ./set-crontab.sh
